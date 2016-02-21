@@ -1,0 +1,24 @@
+{
+  "name" : "nia/translating",
+  "description" : "Component provides several interfaces and classes for translations and pluralizations.",
+  "require" : {
+    "php" : ">=7.0.0",
+    "nia/collection-map-stringmap" : "*"
+  },
+  "license" : "MIT",
+  "keywords" : [ "nia", "i18n", "translation", "translating", "locale", "formatting", "formatter", "message" ],
+  "minimum-stability" : "dev",
+  "autoload" : {
+    "psr-4" : {
+      "Nia\\Translating\\" : "sources/",
+      "Test\\Nia\\Translating\\" : "tests/"
+    }
+  },
+  "type" : "library",
+  "homepage" : "http://www.nat-software.de",
+  "authors" : [ {
+    "name" : "Patrick Ullmann",
+    "email" : "patrick.ullmann@nat-software.de",
+    "role" : "lead"
+  } ]
+}
