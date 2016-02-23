@@ -17,6 +17,7 @@ use Nia\Translating\Selector\SelectorInterface;
 use Nia\Translating\Collection\CompositeCollection;
 use Nia\Collection\Map\StringMap\Map;
 use Nia\Translating\Filter\FilterInterface;
+use Nia\Translating\Selector\NullSelector;
 
 /**
  * Default collection translator implementation.
@@ -108,7 +109,14 @@ class CollectionTranslator implements CollectionTranslatorInterface
      */
     public function translate(string $messageId, int $value = null, MapInterface $context = null, string $locale = null): string
     {
-        $value = $value ?? 0;
+        $selector = $this->selector;
+
+        // if no value passed the null selector will be used.
+        if ($value === null) {
+            $selector = new NullSelector();
+            $value = 0;
+        }
+
         $context = $context ?? new Map();
 
         $localeHierarchy = array_merge([
@@ -125,7 +133,7 @@ class CollectionTranslator implements CollectionTranslatorInterface
             }
 
             $messages = $this->collections[$locale]->get($messageId);
-            $message = $this->selector->choose($locale, $messages, $value);
+            $message = $selector->choose($locale, $messages, $value);
 
             return $this->filter->filter($this, $locale, $message, $context);
         }

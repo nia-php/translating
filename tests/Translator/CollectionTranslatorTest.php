@@ -82,6 +82,13 @@ class CollectionTranslatorTest extends PHPUnit_Framework_TestCase
             ])
         ]);
 
+        // no selector
+        // -----------------------------------
+        $expected = 'Du hast value neue Nachricht.';
+        $actual = $translator->translate('foobar', null);
+
+        $this->assertSame($expected, $actual);
+
         // singulars
         // -----------------------------------
 
