@@ -54,7 +54,7 @@ class Collection implements CollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CollectionInterface::getLocale()
      */
@@ -65,7 +65,7 @@ class Collection implements CollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CollectionInterface::has($messageId)
      */
@@ -76,7 +76,7 @@ class Collection implements CollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CollectionInterface::get($messageId)
      */
@@ -91,7 +91,7 @@ class Collection implements CollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see IteratorAggregate::getIterator()
      */

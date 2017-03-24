@@ -20,7 +20,7 @@ class NullSelector implements SelectorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Selector\SelectorInterface::choose($locale, $messages, $value)
      */

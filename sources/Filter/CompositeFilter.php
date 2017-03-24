@@ -41,7 +41,7 @@ class CompositeFilter implements CompositeFilterInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Filter\FilterInterface::filter($translator, $locale, $message, $context)
      */
@@ -56,7 +56,7 @@ class CompositeFilter implements CompositeFilterInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Filter\CompositeFilterInterface::addFilter($filter)
      */
@@ -69,7 +69,7 @@ class CompositeFilter implements CompositeFilterInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Filter\CompositeFilterInterface::getFilters()
      */

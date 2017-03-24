@@ -21,7 +21,7 @@ class NullFormatter implements FormatterInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Formatter\FormatterInterface::format($translator, $locale, $value, $context)
      */

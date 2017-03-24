@@ -79,7 +79,7 @@ class CollectionTranslator implements CollectionTranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\TranslatorInterface::setLocaleHierarchy($localeHierarchy)
      */
@@ -92,7 +92,7 @@ class CollectionTranslator implements CollectionTranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\TranslatorInterface::getLocaleHierarchy()
      */
@@ -103,7 +103,7 @@ class CollectionTranslator implements CollectionTranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\TranslatorInterface::translate($messageId, $value, $context, $locale)
      */
@@ -143,7 +143,7 @@ class CollectionTranslator implements CollectionTranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\CollectionTranslatorInterface::addCollection($collection)
      */
@@ -162,7 +162,7 @@ class CollectionTranslator implements CollectionTranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\CollectionTranslatorInterface::getCollections()
      */

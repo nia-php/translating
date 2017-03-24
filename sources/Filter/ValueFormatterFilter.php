@@ -52,7 +52,7 @@ class ValueFormatterFilter implements FilterInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Filter\FilterInterface::filter($translator, $locale, $message, $context)
      */

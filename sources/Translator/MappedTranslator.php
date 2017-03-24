@@ -61,7 +61,7 @@ class MappedTranslator implements TranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\TranslatorInterface::setLocaleHierarchy($localeHierarchy)
      */
@@ -74,7 +74,7 @@ class MappedTranslator implements TranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\TranslatorInterface::getLocaleHierarchy()
      */
@@ -85,7 +85,7 @@ class MappedTranslator implements TranslatorInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Translator\TranslatorInterface::translate($messageId, $value, $context, $locale)
      */
