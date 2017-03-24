@@ -54,7 +54,7 @@ class CompositeCollection implements CompositeCollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CollectionInterface::getLocale()
      */
@@ -65,7 +65,7 @@ class CompositeCollection implements CompositeCollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CollectionInterface::has($messageId)
      */
@@ -82,7 +82,7 @@ class CompositeCollection implements CompositeCollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CollectionInterface::get($messageId)
      */
@@ -99,7 +99,7 @@ class CompositeCollection implements CompositeCollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CompositeCollectionInterface::addCollection($collection)
      */
@@ -116,7 +116,7 @@ class CompositeCollection implements CompositeCollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Nia\Translating\Collection\CompositeCollectionInterface::getCollections()
      */
@@ -127,7 +127,7 @@ class CompositeCollection implements CompositeCollectionInterface
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see IteratorAggregate::getIterator()
      */
