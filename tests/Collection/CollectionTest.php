@@ -2,7 +2,7 @@
 /*
  * This file is part of the nia framework architecture.
  *
- * (c) 2016 - Patrick Ullmann <patrick.ullmann@nat-software.de>
+ * (c) Patrick Ullmann <patrick.ullmann@nat-software.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,14 +10,14 @@
 declare(strict_types = 1);
 namespace Test\Nia\Translating\Collection;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Nia\Translating\Collection\Collection;
 use Nia\Collection\Map\StringMap\MapInterface;
 
 /**
  * Unit test for \Nia\Translating\Collection\Collection.
  */
-class CollectionTest extends PHPUnit_Framework_TestCase
+class CollectionTest extends TestCase
 {
 
     /**
@@ -36,7 +36,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
     public function testHas()
     {
         $collection = new Collection('de_DE', [
-            'foobar' => $this->getMock(MapInterface::class)
+            'foobar' => $this->createMock(MapInterface::class)
         ]);
 
         $this->assertSame(true, $collection->has('foobar'));
@@ -48,7 +48,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
      */
     public function testGet()
     {
-        $message = $this->getMock(MapInterface::class);
+        $message = $this->createMock(MapInterface::class);
 
         $collection = new Collection('de_DE', [
             'foobar' => $message
@@ -62,7 +62,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
      */
     public function testGetException()
     {
-        $this->setExpectedException(\OutOfBoundsException::class, 'Message "foobar" is not contained in this collection.');
+        $this->expectException(\OutOfBoundsException::class, 'Message "foobar" is not contained in this collection.');
 
         $collection = new Collection('de_DE', []);
 
@@ -75,8 +75,8 @@ class CollectionTest extends PHPUnit_Framework_TestCase
     public function testGetIterator()
     {
         $expected = [
-            'foobar' => $this->getMock(MapInterface::class),
-            'foobaz' => $this->getMock(MapInterface::class)
+            'foobar' => $this->createMock(MapInterface::class),
+            'foobaz' => $this->createMock(MapInterface::class)
         ];
 
         $collection = new Collection('de_DE', $expected);
