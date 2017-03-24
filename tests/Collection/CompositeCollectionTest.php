@@ -2,7 +2,7 @@
 /*
  * This file is part of the nia framework architecture.
  *
- * (c) 2016 - Patrick Ullmann <patrick.ullmann@nat-software.de>
+ * (c) Patrick Ullmann <patrick.ullmann@nat-software.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,7 +10,7 @@
 declare(strict_types = 1);
 namespace Test\Nia\Translating\Collection;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Nia\Translating\Collection\CompositeCollection;
 use Nia\Translating\Collection\Collection;
 use Nia\Collection\Map\StringMap\MapInterface;
@@ -18,7 +18,7 @@ use Nia\Collection\Map\StringMap\MapInterface;
 /**
  * Unit test for \Nia\Translating\Collection\CompositeCollection.
  */
-class CompositeCollectionTest extends PHPUnit_Framework_TestCase
+class CompositeCollectionTest extends TestCase
 {
 
     /**
@@ -38,7 +38,7 @@ class CompositeCollectionTest extends PHPUnit_Framework_TestCase
     {
         $collection = new CompositeCollection('de_DE', [
             new Collection('de_DE', [
-                'foobar' => $this->getMock(MapInterface::class)
+                'foobar' => $this->createMock(MapInterface::class)
             ])
         ]);
 
@@ -51,7 +51,7 @@ class CompositeCollectionTest extends PHPUnit_Framework_TestCase
      */
     public function testGet()
     {
-        $foobar = $this->getMock(MapInterface::class);
+        $foobar = $this->createMock(MapInterface::class);
 
         $collection = new CompositeCollection('de_DE', [
             new Collection('de_DE', [
@@ -67,7 +67,7 @@ class CompositeCollectionTest extends PHPUnit_Framework_TestCase
      */
     public function testGetException()
     {
-        $this->setExpectedException(\OutOfBoundsException::class, 'Message "foobar" is not contained in this collection.');
+        $this->expectException(\OutOfBoundsException::class, 'Message "foobar" is not contained in this collection.');
 
         $collection = new CompositeCollection('de_DE');
 
@@ -103,7 +103,7 @@ class CompositeCollectionTest extends PHPUnit_Framework_TestCase
      */
     public function testAddCollectionException()
     {
-        $this->setExpectedException(\InvalidArgumentException::class, 'Passed collection uses the locale "en_US", but "de_DE" is required.');
+        $this->expectException(\InvalidArgumentException::class, 'Passed collection uses the locale "en_US", but "de_DE" is required.');
 
         $collection = new CompositeCollection('de_DE');
         $collection->addCollection(new Collection('en_US', []));

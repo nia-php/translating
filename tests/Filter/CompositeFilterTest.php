@@ -2,7 +2,7 @@
 /*
  * This file is part of the nia framework architecture.
  *
- * (c) 2016 - Patrick Ullmann <patrick.ullmann@nat-software.de>
+ * (c) Patrick Ullmann <patrick.ullmann@nat-software.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,7 +10,7 @@
 declare(strict_types = 1);
 namespace Test\Nia\Translating\Filter;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Nia\Translating\Filter\CompositeFilter;
 use Nia\Translating\Filter\FilterInterface;
 use Nia\Translating\Translator\TranslatorInterface;
@@ -19,7 +19,7 @@ use Nia\Collection\Map\StringMap\MapInterface;
 /**
  * Unit test for \Nia\Translating\Filter\CompositeFilter.
  */
-class CompositeFilterTest extends PHPUnit_Framework_TestCase
+class CompositeFilterTest extends TestCase
 {
 
     /**
@@ -63,9 +63,9 @@ class CompositeFilterTest extends PHPUnit_Framework_TestCase
             $filter1
         ], $filter->getFilters());
 
-        $translator = $this->getMock(TranslatorInterface::class);
+        $translator = $this->createMock(TranslatorInterface::class);
         $locale = 'de_DE';
-        $context = $this->getMock(MapInterface::class);
+        $context = $this->createMock(MapInterface::class);
 
         $this->assertSame('>|> foo bar <|<', $filter->filter($translator, $locale, ' foo bar ', $context));
     }

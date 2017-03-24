@@ -2,7 +2,7 @@
 /*
  * This file is part of the nia framework architecture.
  *
- * (c) 2016 - Patrick Ullmann <patrick.ullmann@nat-software.de>
+ * (c) Patrick Ullmann <patrick.ullmann@nat-software.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,14 +10,14 @@
 declare(strict_types = 1);
 namespace Test\Nia\Translating\Selector;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Nia\Translating\Selector\PluralRuleSelector;
 use Nia\Collection\Map\StringMap\Map;
 
 /**
  * Unit test for \Nia\Translating\Selector\PluralRuleSelector.
  */
-class PluralRuleSelectorTest extends PHPUnit_Framework_TestCase
+class PluralRuleSelectorTest extends TestCase
 {
 
     /**
@@ -44,7 +44,7 @@ class PluralRuleSelectorTest extends PHPUnit_Framework_TestCase
      */
     public function testChooseException()
     {
-        $this->setExpectedException(\InvalidArgumentException::class, 'No plural rule defined for "xxx_XXX".');
+        $this->expectException(\InvalidArgumentException::class, 'No plural rule defined for "xxx_XXX".');
 
         $selector = new PluralRuleSelector();
 

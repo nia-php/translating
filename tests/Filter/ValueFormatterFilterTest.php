@@ -2,7 +2,7 @@
 /*
  * This file is part of the nia framework architecture.
  *
- * (c) 2016 - Patrick Ullmann <patrick.ullmann@nat-software.de>
+ * (c) Patrick Ullmann <patrick.ullmann@nat-software.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,7 +10,7 @@
 declare(strict_types = 1);
 namespace Test\Nia\Translating\Filter;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Nia\Translating\Filter\ValueFormatterFilter;
 use Nia\Translating\Translator\TranslatorInterface;
 use Nia\Collection\Map\StringMap\MapInterface;
@@ -20,7 +20,7 @@ use Nia\Collection\Map\StringMap\Map;
 /**
  * Unit test for \Nia\Translating\Filter\ValueFormatterFilter.
  */
-class ValueFormatterFilterTest extends PHPUnit_Framework_TestCase
+class ValueFormatterFilterTest extends TestCase
 {
 
     /**
@@ -43,7 +43,7 @@ class ValueFormatterFilterTest extends PHPUnit_Framework_TestCase
             'dump' => $formatter
         ]);
 
-        $translator = $this->getMock(TranslatorInterface::class);
+        $translator = $this->createMock(TranslatorInterface::class);
         $locale = 'de_DE';
 
         // test empty context
